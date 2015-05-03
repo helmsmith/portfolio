@@ -1,11 +1,7 @@
-### Well hello there!
+### Portfolio WIP
 
-This repository is meant to provide an example for *forking* a repository on GitHub.
+#Round 1 submission
 
-Creating a *fork* is producing a personal copy of someone else's project. Forks act as a sort of bridge between the original repository and your personal copy. You can submit *Pull Requests* to help make other people's projects better by offering your changes up to the original project. Forking is at the core of social coding at GitHub.
+So far I've been focusing on structuring my Sass, keeping it as clean and futureproof as possible. The main structure of the homepage is here, but nothing is interactive quite yet.
 
-After forking this repository, you can make some changes to the project, and submit [a Pull Request](https://github.com/octocat/Spoon-Knife/pulls) as practice.
-
-For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, eius non, excepturi quisquam ex tempore ut inventore eligendi aut quibusdam animi necessitatibus ratione tenetur laudantium corporis possimus nesciunt fuga dicta.
+Looking for feedback on my Sass organization and any tips on using it better.
