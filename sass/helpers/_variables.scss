@@ -1,0 +1,59 @@
+// Breakpoints
+$bp-mobile: 500px;
+
+// Font weights
+$thin:    300;
+$light:   300;
+$regular: 500;
+$bold:    700;
+$heavy:   700;
+
+// Font sizes
+$xx-small:  .7rem;
+$x-small:   .8rem;
+$small:     .9rem;
+$medium:       1rem;
+$large:     1.5rem;
+$x-large:   2.5rem;
+$xx-large:  3.3rem;
+
+// Base Font
+$base-font-family: 'Venti', 'europa', 'freight-sans-pro', sans-serif;
+
+// Headings
+$header-font-weight: $light;
+
+
+// Vertical Margins
+$margin-x-small:  10px;
+$margin-small:  30px;
+$margin-medium: 60px;
+$margin-large:  120px;
+$margin-x-large:  240px;
+
+// Left-Right Margins
+$margin-lr-medium: 12%;
+
+// Transitions
+$transition-short: .05s;
+$transition-medium: .2s;
+$transition-long: 1s;
+
+//////////// GRID
+
+// 2 Columns
+  $grid-1-2: 50%;
+
+// 3 Columns
+  $grid-1-3: 33.33333%;
+  $grid-2-3: 66.66666%;
+
+// 4 Columns
+  $grid-1-4: 25%;
+  $grid-3-4: 75%;
+
+// 5 Columns
+  $grid-1-5: 20%;
+  $grid-2-5: 40%;
+  $grid-3-5: 60%;
+  $grid-4-5: 80%;

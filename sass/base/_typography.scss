@@ -1,0 +1,112 @@
+body {
+  font-family: $base-font-family;
+  color: $primary2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: $header-font-weight;
+}
+
+h2 {
+  font-size: $large;
+  font-weight: $regular;
+  color: $secondary1;
+}
+
+p {
+  font-weight: $bold;
+  font-size: $large;
+  margin: 0 0 $margin-small 0;
+
+  footer & {
+    font-size: $small;
+  }
+
+  // .home-lists & {
+  //   font-size: $large;
+  // }
+
+  &.large {
+    font-size: $xx-large;
+    letter-spacing: -1px;
+  }
+}
+
+a {
+  color: $primary3;
+  text-decoration: none;
+  border-bottom: 3px solid $primary1;
+
+  .social-links & {
+    color: $secondary1;
+  }
+
+  &:hover {
+    color: $primary3;
+  }
+
+  p &:hover {
+    border-bottom: 3px solid $primary3;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  li {
+    margin-bottom: 8px;
+    font-size: $large;
+    font-weight: $bold;
+  }
+}
+
+// Navigation
+
+.left-right {
+  font-weight: $heavy;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-align: center;
+}
+
+.main-nav span {
+  font-size: $xx-small;
+  font-weight: $heavy;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+// Form / Input
+
+.button {
+  color: $primary1;
+  font-weight: $heavy;
+  font-size: $small;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.field {
+  font-size: $large;
+  color: $primary2;
+}
+
+::-webkit-input-placeholder {
+   color: $secondary1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $secondary1;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $secondary1;  
+}
+
+:-ms-input-placeholder {  
+   color: $secondary1;  
+}
