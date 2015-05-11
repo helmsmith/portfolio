@@ -1,0 +1,73 @@
+// Global Layout
+body {
+  padding: $margin-large 12% $margin-medium 12%;
+  background-color: $primary1;
+  border: solid 10px $secondary2;
+  position: relative;
+  // background: url('../img/bg-pattern.png') repeat;
+  // background-size: 412px 412px;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: $margin-large 8% $margin-medium 12%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    padding: $margin-medium 8%;
+  }
+}
+
+.margin-flex {
+  margin-bottom: $margin-large;
+}
+
+@media screen and (max-width: 700px) {
+  .margin-flex {
+    margin-bottom: $margin-medium;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 80px;
+  margin: 0 0 20vh 0;
+}
+
+@media screen and (max-width: 550px) {
+  .logo {
+    width: 60px;
+  }
+}
+
+footer {
+  p {
+    padding-right: 3%;
+    margin-bottom: 40px;
+    float: left;
+    width: $grid-1-3;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  footer p {
+    width: $grid-1-2;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  footer p {
+    width: $grid-no;
+  }
+}
+
+.hideme
+{
+    opacity:0;
+}

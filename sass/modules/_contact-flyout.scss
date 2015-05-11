@@ -1,10 +1,9 @@
 .contact-flyout {
+  display: none;
   background-color: $secondary2;
   position: absolute;
   left: 0;
   right: 0;
-  // height: 250px;
-  // z-index: -1;
   padding: 0 16%;
   margin-bottom: 0;
   &::before {
@@ -21,9 +20,10 @@
   }
 }
 
-// Margin-Top for Next Element
-.contact-margin {
-  margin-top: 350px;
+@media screen and (max-width: 550px) {
+  .contact-flyout {
+    padding: 0 10%;
+  }
 }
 
 // Form Elements
@@ -33,7 +33,7 @@
   border: none;
   background: none;
   border-bottom: 3px solid $secondary1;
-  width: 50%;
+  width: 100%;
   display: block;
   &:focus {
     outline: none;
@@ -43,6 +43,9 @@
 .button {
   padding: 20px 40px;
   margin: $margin-small 0;
-  background-color: $primary3;
-  border: none;
+  background-color: transparent;
+  border: 3px solid $primary3;
+  &:hover {
+    background-color: $primary3;
+  }
 }

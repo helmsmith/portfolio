@@ -3,22 +3,23 @@ $bp-mobile: 500px;
 
 // Font weights
 $thin:    300;
-$light:   300;
+$light:   400;
 $regular: 500;
-$bold:    700;
+$bold:    600;
 $heavy:   700;
 
 // Font sizes
-$xx-small:  .7rem;
-$x-small:   .8rem;
-$small:     .9rem;
-$medium:       1rem;
-$large:     1.5rem;
-$x-large:   2.5rem;
+$xx-small:  .8rem;
+$x-small:   1rem;
+$small:     1.2rem;
+$medium:       1.5rem;
+$large:     2rem;
+$x-large:   2.6rem;
 $xx-large:  3.3rem;
 
 // Base Font
-$base-font-family: 'Venti', 'europa', 'freight-sans-pro', sans-serif;
+$base-font-family: "europa", sans-serif;
+$alt-font-family: "freight-text-pro",sans-serif;
 
 // Headings
 $header-font-weight: $light;
@@ -40,6 +41,9 @@ $transition-medium: .2s;
 $transition-long: 1s;
 
 //////////// GRID
+
+// 1 Column
+  $grid-no: 100%;
 
 // 2 Columns
   $grid-1-2: 50%;

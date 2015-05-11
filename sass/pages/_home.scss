@@ -1,0 +1,52 @@
+// Home Page
+.social-links {
+  margin-bottom: $margin-medium;
+  a {
+    border-bottom: 2px solid $secondary2;
+    display: inline-block;
+    margin-right: 2%;
+    &:hover {
+      border-bottom: 2px solid $primary3;
+    }
+  }
+}
+
+.home-lists {
+  div {
+    padding-right: $margin-small;
+    float: left;
+    width: $grid-1-3;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .home-lists{
+    div {
+      width: $grid-1-2;
+    }
+    div.twitter {
+      width: $grid-no;
+    }
+  }
+}
+
+.home-blog {
+  clear: both;
+}
+
+#contact-link {
+  cursor: pointer;
+}
+
+.contact-hand {
+  position: absolute;
+  left: 0;
+  width: 15%;
+  z-index: 3;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-hand {
+    transform: translate(-50%,10px);
+  }
+}

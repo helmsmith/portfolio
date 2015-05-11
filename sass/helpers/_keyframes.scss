@@ -1,0 +1,127 @@
+* {
+  transition: all .3s ease;
+}
+
+// General
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Contact Hand
+
+@keyframes slide-right {
+  0% {
+    transform: translate(-100%, 15%);
+  }
+  50% {
+    transform: translate(-30%, 15%);
+  }
+  100% {
+    transform: translate(-35%, 15%);
+  }
+}
+
+.slide-right {
+  animation: slide-right 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+
+// Main Menu Flyovers
+
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translate(-50%,-50px) scale(.95,.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%,-60px) scale(1,1);
+  }
+}
+
+.fade-slide-up {
+  animation: fade-slide-up .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+
+// Content Fade In
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fade-up .8s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+
+// Contact Open
+
+@keyframes unroll {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 285px;
+  }
+}
+
+.unroll {
+  animation: unroll .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes contact-margin {
+  0% {
+  }
+  100% {
+    margin-top: 350px;
+  }
+}
+
+.contact-margin {
+  animation: contact-margin .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+#contact {
+  opacity: 0;
+  animation: fade .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: .75s;
+}
+
+// Main Nav animate
+
+@keyframes nav-dots {
+  0% {
+    opacity: 0;
+    margin-right: 50px;
+  }
+  100% {
+    opacity: 1;
+    margin-right: 15px;
+  }
+}
