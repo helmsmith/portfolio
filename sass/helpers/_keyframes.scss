@@ -13,6 +13,37 @@
   }
 }
 
+// Body Border  ((not working))
+
+@keyframes bodyframe {
+  0% {
+    border: solid 1px $secondary2;
+  }
+  100% {
+    border: solid 10px $secondary2;
+  }
+}
+
+// Left Right nav slide in  ((not working))
+
+@keyframes left-nav-slide {
+  0% {
+    transform: rotate(-90deg) translate(-50%, -50px);
+  }
+  100% {
+    transform: rotate(-90deg) translate(-50%, -31px);
+  }
+}
+
+@keyframes right-nav-slide {
+  0% {
+    transform: rotate(90deg) translate(50%, -50px);
+  }
+  100% {
+    transform: rotate(90deg) translate(50%, -31px);
+  }
+}
+
 // Contact Hand
 
 @keyframes slide-right {

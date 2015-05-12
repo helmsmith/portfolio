@@ -38,10 +38,10 @@ $("#close-btn").click(function(){
   $("#menu-btn").show();
 });
 
-$(".main-nav").click(function(){
-  $(".main-nav").fadeOut();
-  $("#menu-btn").show();
-});
+// $(".main-nav").click(function(){
+//   $(".main-nav").fadeOut();
+//   $("#menu-btn").show();
+// });
 
 
 // Fade in on scroll

@@ -3,6 +3,7 @@
 @media screen and (min-width: 550px) {
   .main-nav {
     margin-bottom: $margin-small;
+    mix-blend-mode: multiply;
     & a {
       display: inline-block;
       width: 10px;

@@ -2,10 +2,13 @@
 body {
   padding: $margin-large 12% $margin-medium 12%;
   background-color: $primary1;
-  border: solid 10px $secondary2;
   position: relative;
   // background: url('../img/bg-pattern.png') repeat;
   // background-size: 412px 412px;
+  border: solid 10px $secondary2;
+  // animation: bodyframe 3s;
+  // animation-timing-function: ease;
+  // animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 900px) {

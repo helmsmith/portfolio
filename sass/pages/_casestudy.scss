@@ -1,8 +1,31 @@
 // Case Studies
-.case-study-bg {
+
+.case-study-bg-2,
+.case-study-bg-3,
+.case-study-bg-4,
+.case-study-bg-5 {
   position: absolute;
-  width: 80%;
-  margin-left: -2.5%;
-  margin-top: -300px;
+  width: 60%;
   z-index: -1;
+}
+
+
+.case-study-bg-2 {
+  margin-left: 40%;
+  margin-top: -200px;
+}
+
+.case-study-bg-3 {
+  margin-left: -40%;
+  margin-top: -100px;
+}
+
+.case-study-bg-4 {
+  margin-left: 30%;
+  margin-top: -500px;
+}
+
+.case-study-bg-5 {
+  margin-left: 40%;
+  margin-top: -500px;
 }

@@ -16,7 +16,7 @@
 
 .page-right {
   right: 0;
-  transform: rotate(90deg) translate(50%,-30px);
+  transform: rotate(90deg) translate(50%,-31px);
   transform-origin: top right;
   &:hover {
     transform: rotate(90deg) translate(50%,0);
@@ -25,7 +25,7 @@
 
 .page-left {
   left: 0;
-  transform: rotate(-90deg) translate(-50%,-30px);
+  transform: rotate(-90deg) translate(-50%,-31px);
   transform-origin: top left;
   &:hover {
     transform: rotate(-90deg) translate(-50%,0);

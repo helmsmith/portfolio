@@ -36,6 +36,7 @@ p {
   font-weight: $bold;
   font-size: $medium;
   margin: 0 0 $margin-small 0;
+  mix-blend-mode: multiply;
 
   footer & {
     font-size: $xx-small;
