@@ -127,6 +127,43 @@
 }
 
 
+// Gallery Slide In
+
+@keyframes gallery-move-right {
+  0% {
+    opacity: 0;
+    transform: translate(50%,30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+.img-move-right {
+  animation: gallery-move-right .8s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes gallery-move-left {
+  0% {
+    opacity: 0;
+    transform: translate(-50%,30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+.img-move-left {
+  animation: gallery-move-left .8s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+
 // Contact Open
 
 @keyframes unroll {

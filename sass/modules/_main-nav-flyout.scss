@@ -1,14 +1,14 @@
 // Main Nav
 
 .main-nav * {
-  transition: border .3s;
+  // transition: border .3s;
 }
 
 @media screen and (min-width: 550px) {
   .main-nav {
     margin-bottom: $margin-small;
     mix-blend-mode: multiply;
-    transition: none;
+    // transition: none;
     & a {
       display: inline-block;
       width: 10px;
@@ -90,7 +90,7 @@
     left: 0;
     padding-top: 25vh;
     min-height: 600px;
-    z-index: 100;
+    z-index: 10;
     display: none;
     border: solid 10px $primary1;
     a {
@@ -107,67 +107,111 @@
       border: 3px solid $primary1;
     }
   }
-  .close-btn {
-    transform: rotate(45deg);
+  
+  // .close-btn {
+  //   transform: rotate(45deg);
+  //   position: absolute;
+  //   width: 20px;
+  //   height: 20px;
+  //   top:  50px;
+  //   right: 13%;
+  //   & span {
+  //     display: block;
+  //     background-color: $primary1;
+  //     width: 20px;
+  //     height: 3px;
+  //     padding: 0;
+  //     margin: 0;
+  //     &::before {
+  //       content: "";
+  //       display: block;
+  //       background-color: $primary1;
+  //       width: 3px;
+  //       height: 20px;
+  //       transform: translate(8px,-8px);
+  //     }
+  //     &:hover {
+  //       // padding: 0;
+  //       // margin: 0;
+  //       // border: none;
+  //     }
+  //   }
+  // }
+  // .hamburger {
+  //   & a {
+  //     width: 20px;
+  //     height: 20px;
+  //     position: absolute;
+  //     top: 60px;
+  //     right: 10%;
+  //   }
+  // }
+  // .menu-btn {
+  //   display: block;
+  //   background-color: $primary3;
+  //   width: 20px;
+  //   height: 3px;
+  //   z-index: 50;
+  //   padding: 0;
+  //   margin: 0;
+  //   &::before {
+  //     content: "";
+  //     display: block;
+  //     background-color: $primary3;
+  //     width: 20px;
+  //     height: 3px;
+  //     transform: translateY(12px);
+  //   }
+  //   &::after {
+  //     content: "";
+  //     display: block;
+  //     background-color: $primary3;
+  //     width: 20px;
+  //     height: 3px;
+  //     transform: translateY(3px);
+  //   }
+  // }
+
+  #nav-toggle { 
+    cursor: pointer; 
+    padding: 10px 35px 16px 0px;
     position: absolute;
-    width: 20px;
-    height: 20px;
-    top:  50px;
-    right: 13%;
-    & span {
-      display: block;
-      background-color: $primary1;
-      width: 20px;
-      height: 3px;
-      padding: 0;
-      margin: 0;
-      &::before {
-        content: "";
-        display: block;
-        background-color: $primary1;
-        width: 3px;
-        height: 20px;
-        transform: translate(8px,-8px);
-      }
-      &:hover {
-        // padding: 0;
-        // margin: 0;
-        // border: none;
-      }
-    }
+    top: 60px;
+    right: 10%;
+    z-index: 100;
   }
-  .hamburger {
-    & a {
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      top: 60px;
-      right: 10%;
-    }
-  }
-  .menu-btn {
-    display: block;
-    background-color: $primary3;
-    width: 20px;
+
+  #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+    cursor: pointer;
     height: 3px;
-    z-index: 50;
-    padding: 0;
-    margin: 0;
-    &::before {
-      content: "";
-      display: block;
-      background-color: $primary3;
-      width: 20px;
-      height: 3px;
-      transform: translateY(12px);
-    }
-    &::after {
-      content: "";
-      display: block;
-      background-color: $primary3;
-      width: 20px;
-      height: 3px;
-      transform: translateY(3px);
-    }
+    width: 25px;
+    background: $primary3;
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  #nav-toggle span:before {
+    top: -6px; 
+  }
+  #nav-toggle span:after {
+    bottom: -6px;
+  }
+
+  #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+    transition: all 500ms ease-in-out;
+  }
+  #nav-toggle.active span {
+    background-color: transparent;
+  }
+  #nav-toggle.active span:before, #nav-toggle.active span:after {
+    top: 0;
+    background: $primary1;
+  }
+  #nav-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+  #nav-toggle.active span:after {
+    transform: translateY(-10px) rotate(-45deg);
+    top: 10px;
   }
 }

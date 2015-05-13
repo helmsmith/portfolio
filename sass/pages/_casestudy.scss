@@ -5,7 +5,7 @@
 .case-study-bg-4,
 .case-study-bg-5 {
   position: absolute;
-  width: 60%;
+  width: $grid-1-3;
   z-index: -1;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .case-study-bg-3 {
-  margin-left: -40%;
+  margin-left: -10%;
   margin-top: -100px;
 }
 

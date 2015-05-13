@@ -1,4 +1,9 @@
 // Global Layout
+
+.clearboth {
+  clear: both;
+}
+
 body {
   padding: $margin-large 0 $margin-medium 0;
   background-color: $primary1;
