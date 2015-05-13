@@ -1,29 +1,9 @@
 .contact-flyout {
-  display: none;
   background-color: $secondary2;
-  position: absolute;
   left: 0;
   right: 0;
-  padding: 0 16%;
-  margin-bottom: 0;
-  &::before {
-    content: "";
-    width: 30px;
-    height: 30px;
-    display: block;
-    position: relative;
-    top:-12px;
-    left: 12%;
-    background-color: $secondary2;
-    transform: rotate(45deg);
-    z-index: -1;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .contact-flyout {
-    padding: 0 10%;
-  }
+  margin: $margin-medium 0 $margin-small 0;
+  z-index: 0;
 }
 
 // Form Elements
@@ -47,5 +27,21 @@
   border: 3px solid $primary3;
   &:hover {
     background-color: $primary3;
+  }
+}
+
+#contact {
+  opacity: 0;
+    &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: relative;
+    top:-12px;
+    left: 0;
+    background-color: $secondary2;
+    transform: rotate(45deg);
+    z-index: -1;
   }
 }

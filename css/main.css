@@ -67,29 +67,62 @@
             transform: rotate(90deg) translate(50%, -31px); } }
 @-webkit-keyframes slide-right {
   0% {
-    -webkit-transform: translate(-100%, 15%);
-            transform: translate(-100%, 15%); }
-  50% {
-    -webkit-transform: translate(-30%, 15%);
-            transform: translate(-30%, 15%); }
+    opacity: 0;
+    -webkit-transform: translate(-200%, 15%);
+            transform: translate(-200%, 15%); }
+  20% {
+    opacity: 1; }
   100% {
-    -webkit-transform: translate(-35%, 15%);
-            transform: translate(-35%, 15%); } }
+    opacity: 1;
+    -webkit-transform: translate(-110%, 15%);
+            transform: translate(-110%, 15%); } }
 @keyframes slide-right {
   0% {
-    -webkit-transform: translate(-100%, 15%);
-            transform: translate(-100%, 15%); }
-  50% {
-    -webkit-transform: translate(-30%, 15%);
-            transform: translate(-30%, 15%); }
+    opacity: 0;
+    -webkit-transform: translate(-200%, 15%);
+            transform: translate(-200%, 15%); }
+  20% {
+    opacity: 1; }
   100% {
-    -webkit-transform: translate(-35%, 15%);
-            transform: translate(-35%, 15%); } }
+    opacity: 1;
+    -webkit-transform: translate(-110%, 15%);
+            transform: translate(-110%, 15%); } }
 .slide-right {
-  -webkit-animation: slide-right 1s;
-          animation: slide-right 1s;
+  -webkit-animation: slide-right .7s;
+          animation: slide-right .7s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes slide-left {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-110%, 15%);
+            transform: translate(-110%, 15%); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-200%, 15%);
+            transform: translate(-200%, 15%); } }
+
+@keyframes slide-left {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-110%, 15%);
+            transform: translate(-110%, 15%); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-200%, 15%);
+            transform: translate(-200%, 15%); } }
+.slide-left {
+  -webkit-animation: slide-left .5s;
+          animation: slide-left .5s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
@@ -149,39 +182,52 @@
 
 @-webkit-keyframes unroll {
   0% {
-    height: 0; }
+    height: 0;
+    opacity: 0; }
   100% {
-    height: 285px; } }
+    height: 285px;
+    opacity: 1; } }
 
 @keyframes unroll {
   0% {
-    height: 0; }
+    height: 0;
+    opacity: 0; }
   100% {
-    height: 285px; } }
+    height: 285px;
+    opacity: 1; } }
 .unroll {
   -webkit-animation: unroll .5s;
           animation: unroll .5s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
+          animation-fill-mode: forwards;
+  display: visible; }
 
-@-webkit-keyframes contact-margin {
+@-webkit-keyframes reroll {
+  0% {
+    height: 285px;
+    opacity: 1; }
   100% {
-    margin-top: 350px; } }
+    height: 0;
+    opacity: 0; } }
 
-@keyframes contact-margin {
+@keyframes reroll {
+  0% {
+    height: 285px;
+    opacity: 1; }
   100% {
-    margin-top: 350px; } }
-.contact-margin {
-  -webkit-animation: contact-margin .5s;
-          animation: contact-margin .5s;
+    height: 0;
+    opacity: 0; } }
+.reroll {
+  -webkit-animation: reroll .5s;
+          animation: reroll .5s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
-#contact {
+.fade {
   opacity: 0;
   -webkit-animation: fade .5s;
           animation: fade .5s;
@@ -189,8 +235,8 @@
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: .75s;
-          animation-delay: .75s; }
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s; }
 
 @-webkit-keyframes nav-dots {
   0% {
@@ -220,7 +266,7 @@ h5 {
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #D9CFC6;
   position: relative; }
   h2::before {
@@ -363,17 +409,18 @@ ul {
   color: #D9CFC6; }
 
 body {
-  padding: 120px 12% 60px 12%;
+  padding: 120px 0 60px 0;
   background-color: #fff;
   position: relative;
+  bottom: 0;
   border: solid 10px #F4F0F0; }
 
 @media screen and (max-width: 900px) {
   body {
-    padding: 120px 8% 60px 12%; } }
+    padding: 120px 0 60px 0; } }
 @media screen and (max-width: 550px) {
   body {
-    padding: 60px 8%; } }
+    padding: 60px 0; } }
 .margin-flex {
   margin-bottom: 120px; }
 
@@ -381,9 +428,16 @@ body {
   .margin-flex {
     margin-bottom: 60px; } }
 .container {
-  max-width: 1200px;
-  margin: 0 auto; }
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 12%; }
 
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 0 10%; } }
+@media screen and (max-width: 550px) {
+  .container {
+    padding: 0 8%; } }
 .logo {
   width: 80px;
   margin: 0 0 20vh 0; }
@@ -448,30 +502,12 @@ footer p {
   .page-right, .page-left {
     display: none; } }
 .contact-flyout {
-  display: none;
   background-color: #F4F0F0;
-  position: absolute;
   left: 0;
   right: 0;
-  padding: 0 16%;
-  margin-bottom: 0; }
-  .contact-flyout::before {
-    content: "";
-    width: 30px;
-    height: 30px;
-    display: block;
-    position: relative;
-    top: -12px;
-    left: 12%;
-    background-color: #F4F0F0;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-    z-index: -1; }
+  margin: 60px 0 30px 0;
+  z-index: 0; }
 
-@media screen and (max-width: 550px) {
-  .contact-flyout {
-    padding: 0 10%; } }
 .field {
   padding: 10px 0;
   border: none;
@@ -490,10 +526,32 @@ footer p {
   .button:hover {
     background-color: #E94612; }
 
+#contact {
+  opacity: 0; }
+  #contact::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: relative;
+    top: -12px;
+    left: 0;
+    background-color: #F4F0F0;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    z-index: -1; }
+
+.main-nav * {
+  -webkit-transition: border .3s;
+          transition: border .3s; }
+
 @media screen and (min-width: 550px) {
   .main-nav {
     margin-bottom: 30px;
-    mix-blend-mode: multiply; }
+    mix-blend-mode: multiply;
+    -webkit-transition: none;
+            transition: none; }
     .main-nav a {
       display: inline-block;
       width: 10px;
@@ -592,10 +650,10 @@ footer p {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-    position: fixed;
+    position: absolute;
     width: 20px;
     height: 20px;
-    top: 75px;
+    top: 50px;
     right: 13%; }
     .close-btn span {
       display: block;
@@ -613,10 +671,6 @@ footer p {
         -webkit-transform: translate(8px, -8px);
             -ms-transform: translate(8px, -8px);
                 transform: translate(8px, -8px); }
-      .close-btn span:hover {
-        padding: 0;
-        margin: 0;
-        border: none; }
 
   .hamburger a {
     width: 20px;
@@ -654,6 +708,15 @@ footer p {
 .faded {
   opacity: .15; }
 
+.gallery-fpo {
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 400px;
+  background-color: #D9CFC6;
+  margin-bottom: 120px; }
+
 .social-links {
   margin-bottom: 60px; }
   .social-links a {
@@ -663,15 +726,16 @@ footer p {
     .social-links a:hover {
       border-bottom: 2px solid #E94612; }
 
-.home-lists div {
+.home-lists {
   padding-right: 30px;
   float: left;
   width: 33.33333%; }
 
 @media screen and (max-width: 550px) {
-  .home-lists div {
+  .home-lists {
     width: 50%; }
-  .home-lists div.twitter {
+
+  .twitter {
     width: 100%; } }
 .home-blog {
   clear: both; }
@@ -682,14 +746,13 @@ footer p {
 .contact-hand {
   position: absolute;
   left: 0;
-  width: 15%;
-  z-index: 3; }
+  width: 20%;
+  z-index: 3;
+  opacity: 0;
+  -webkit-transform: translate(-200%, 15%);
+      -ms-transform: translate(-200%, 15%);
+          transform: translate(-200%, 15%); }
 
-@media screen and (max-width: 900px) {
-  .contact-hand {
-    -webkit-transform: translate(-50%, 10px);
-        -ms-transform: translate(-50%, 10px);
-            transform: translate(-50%, 10px); } }
 .case-study-bg-2,
 .case-study-bg-3,
 .case-study-bg-4,

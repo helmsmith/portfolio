@@ -48,19 +48,41 @@
 
 @keyframes slide-right {
   0% {
-    transform: translate(-100%, 15%);
+    opacity: 0;
+    transform: translate(-200%, 15%);
   }
-  50% {
-    transform: translate(-30%, 15%);
+  20% {
+    opacity: 1;
   }
   100% {
-    transform: translate(-35%, 15%);
+    opacity: 1;
+    transform: translate(-110%, 15%);
   }
 }
 
 .slide-right {
-  animation: slide-right 1s;
+  animation: slide-right .7s;
   animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 1;
+    transform: translate(-110%, 15%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-200%, 15%);
+  }
+}
+
+.slide-left {
+  animation: slide-left .5s;
+  animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -110,9 +132,11 @@
 @keyframes unroll {
   0% {
     height: 0;
+    opacity: 0;
   }
   100% {
     height: 285px;
+    opacity: 1;
   }
 }
 
@@ -120,28 +144,32 @@
   animation: unroll .5s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
+  display: visible;
 }
 
-@keyframes contact-margin {
+@keyframes reroll {
   0% {
+    height: 285px;
+    opacity: 1;
   }
   100% {
-    margin-top: 350px;
+    height: 0;
+    opacity: 0;
   }
 }
 
-.contact-margin {
-  animation: contact-margin .5s;
+.reroll {
+  animation: reroll .5s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
 }
 
-#contact {
+.fade {
   opacity: 0;
   animation: fade .5s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
-  animation-delay: .75s;
+  animation-delay: .3s;
 }
 
 // Main Nav animate

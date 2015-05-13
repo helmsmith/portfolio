@@ -16,8 +16,10 @@
     <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body class="clearfix">
-    <div class="container">
-      <header>
+
+<!-- LOGO AND NAVIGATION -->
+    <header>
+      <div class="container">
         <a href="#"><img src="img/logo_main.png" alt="Logo" id="logo" class="logo"></a>
         <nav class="left-right">
           <a href="page2.html" class="page-right">Visn</a>
@@ -44,19 +46,31 @@
             <span class="nav-item">Motorola Solutions</span>
           </a>
         </nav>
-      </header>
-      <main class="margin-flex">
+      </div>
+    </header>
+
+    <main class="margin-flex">
+      <div class="container">
+
+<!-- INTRO PARAGRAPH -->
         <p class="large">Helmsmith is an interactive design studio based in Chicago, IL. Our work helps companies create meaningful connections to people through beautiful experiences. We design <a href="#" id="link-products">products</a>, <a href="#" id="link-brands">brands</a>, and <a href="#" id="link-websites">websites</a>.</p>
         <p class="large hideme">We enjoy working with interesting people to make interesting things.</p>
-        <img src="img/contact-hand.png" id="contact-hand" class="contact-hand hidden slide-right">
-        <p class="large hideme"><a id="contact-link">Get in touch</a> if you'd like to collaborate.</p>
+        <p class="large hideme"><img src="img/contact-hand.png" id="contact-hand" class="contact-hand"><a id="contact-link">Get in touch</a> if you'd like to collaborate.</p>
+      </div>
+        
+<!-- CONTACT FORM -->
         <section id="contact-flyout" class="contact-flyout">
-          <form action="" id="contact">
-            <label for="name"><p>So what's your name?</p></label>
-            <input type="text" class="field" name="name" placeholder="test">
-            <input type="submit" class="button" value="Next">
-          </form>
+          <div class="container fade">
+            <form action="" id="contact">
+              <label for="name"><p>So what's your name?</p></label>
+              <input type="text" class="field" name="name" placeholder="test">
+              <input type="submit" class="button" value="Next">
+            </form>
+          </div>
         </section>
+
+<!-- SOCIAL LINKS -->
+      <div class="container">
         <nav id="social-links" class="social-links hideme">
           <a href="https://twitter.com/jtyler">Twitter</a>
           <a href="https://www.linkedin.com/pub/j-tyler-helms/24/308/546">Linkedin</a>
@@ -64,10 +78,13 @@
           <a href="https://instagram.com/jthelms/">Instagram</a>
           <a href="http://codepen.io/helmsmith/">Codepen</a>
         </nav>
-      </main>
+      </div>
+    </main>
 
-      <section class="home-lists clearfix margin-flex details">
-        <div class="services hideme">
+<!-- MID SECTION -->
+    <section class="clearfix margin-flex details">
+      <div class="container">
+        <div class="home-lists services hideme">
           <h2>Services</h2>
           <ul>
             <li>Art Direction</li>
@@ -79,8 +96,7 @@
             <li>Consulting</li>
           </ul>
         </div>
-
-        <div class="clients hideme">
+        <div class="home-lists clients hideme">
           <h2>Clients</h2>
           <ul>
             <li>Microsoft</li>
@@ -96,32 +112,44 @@
             <li>Starbucks</li>
           </ul>
         </div>
-
-        <div class="twitter hideme">
+        <div class="home-lists twitter hideme">
           <h2>Twitter</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio officia deserunt sint. Sunt, iure, tenetur optio voluptatum nam vitae quo similique non. Nobis unde earum repudiandae omnis, vero. Accusantium.</p>
           <p><a href="">@jtyler - 1.02.15</a></p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="home-news margin-flex hideme">
+<!-- NEWS -->
+    <section class="home-news margin-flex hideme">
+    <div class="container">
         <h2>Currently</h2>
         <p class="large">This week we're designing a mobile app that helps a local radio station deliver content to their listeners.</p>
-      </section>
+      </div>
+    </section>
 
-      <section class="home-recognition margin-flex hideme">
+<!-- GALLERY -->
+    <div class="gallery-fpo hideme">
+    </div>
+
+<!-- RECOGNITION -->
+    <section class="home-recognition margin-flex hideme">
+      <div class="container">
         <p class="large">Our work has been featured in <a href="http://www.movingimage.us/exhibitions/2013/04/03/detail/spectacle-the-music-video/">Spectacle: The Music Video at The Museum of Moving Image in NYC</a>, <a href="http://lbbonline.com/news/new-talent-jt-helms/">Little Black Book Online</a>, <a href="http://www.refinery29.com/chicago-s-hottest-30-under-30-2012#slide-19">Refinery 29</a>, <a href="http://pitchfork.com/features/staff-lists/7695-the-top-50-music-videos-of-the-2000s/">Pitchfork Top 50 Music Videos of the Decade</a>, Tokyo Type Directors Club Awards Competition 2009, Web Marketing Association ‘2009 WebAward’ for AVIA Hotels Web Site, and the <a href="http://pitchfork.com/features/staff-lists/6748-top-50-music-videos-of-2007/">Pitchfork Top 50 Music Videos of 2007</a>.</p>
-      </section>
+      </div>
+    </section>
 
-      <footer class="hideme">
+<!-- FOOTER -->
+    <footer class="hideme">
+      <div class="container">
         <p>©2015 JT Helms<br>
             Designed &amp; developed by JT Helms</p>
         <p>jthelms@gmail.com<br>
             +1.312.203.8855</p>
         <p>1720 S. Michigan Ave, 1408<br>
             Chicago, IL 60616</p>
-      </footer>
-    </div>
+      </div>
+    </footer>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>

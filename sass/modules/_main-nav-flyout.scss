@@ -1,9 +1,14 @@
 // Main Nav
 
+.main-nav * {
+  transition: border .3s;
+}
+
 @media screen and (min-width: 550px) {
   .main-nav {
     margin-bottom: $margin-small;
     mix-blend-mode: multiply;
+    transition: none;
     & a {
       display: inline-block;
       width: 10px;
@@ -56,9 +61,6 @@
           border-color: #fff transparent transparent;
           top: 100%;
         }
-        &:hover {
-          // transform: translateX(30px);
-        }
       }
     }
     & a:hover {
@@ -75,6 +77,8 @@
     }
   }
 }
+
+// Main Nav Overlay Mobile
 
 @media screen and (max-width: 550px) {
   .main-nav {
@@ -105,10 +109,10 @@
   }
   .close-btn {
     transform: rotate(45deg);
-    position: fixed;
+    position: absolute;
     width: 20px;
     height: 20px;
-    top:  75px;
+    top:  50px;
     right: 13%;
     & span {
       display: block;
@@ -126,9 +130,9 @@
         transform: translate(8px,-8px);
       }
       &:hover {
-        padding: 0;
-        margin: 0;
-        border: none;
+        // padding: 0;
+        // margin: 0;
+        // border: none;
       }
     }
   }

@@ -2,17 +2,19 @@
 
 $("#contact-link").hover(
   function() {
-    $("#contact-hand").toggle().addClass("hand-slide");
+    $("#contact-hand").removeClass("slide-left").addClass("slide-right");
   }, function() {
-    $("#contact-hand").toggle();
+    $("#contact-hand").addClass("slide-left").removeClass("slide-right");
 });
 
 
 // Contact Link Flyout
 
+$("#contact-flyout").addClass("reroll");
+
 $("#contact-link").click(function() {
-  $("#contact-flyout").toggle().toggleClass("unroll");
-  $("#social-links").toggleClass("contact-margin").removeClass("hideme").removeClass("fade-up");
+  $("#contact-flyout").toggleClass("reroll").toggleClass("unroll");
+  $("#contact").toggleClass("fade");
 });
 
 
@@ -71,13 +73,3 @@ $(".main-nav a").hover(
   }, function() {
     $(this).children("span").removeClass("fade-slide-up");
 });
-
-
-// $(window).resize(function(){
-//   if ($(window).width() >= 550){  
-//     $(".main-nav").show();
-//   } else if ($(window).width() <= 550){
-//     $(".main-nav").hide();
-//     $(".hamburger").show();
-//   }
-// });

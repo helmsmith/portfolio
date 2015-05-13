@@ -1,25 +1,21 @@
 // Global Layout
 body {
-  padding: $margin-large 12% $margin-medium 12%;
+  padding: $margin-large 0 $margin-medium 0;
   background-color: $primary1;
   position: relative;
-  // background: url('../img/bg-pattern.png') repeat;
-  // background-size: 412px 412px;
+  bottom: 0;
   border: solid 10px $secondary2;
-  // animation: bodyframe 3s;
-  // animation-timing-function: ease;
-  // animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 900px) {
   body {
-    padding: $margin-large 8% $margin-medium 12%;
+    padding: $margin-large 0 $margin-medium 0;
   }
 }
 
 @media screen and (max-width: 550px) {
   body {
-    padding: $margin-medium 8%;
+    padding: $margin-medium 0;
   }
 }
 
@@ -34,8 +30,21 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
+  padding: 0 12%;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    padding: 0 8%;
+  }
 }
 
 .logo {
